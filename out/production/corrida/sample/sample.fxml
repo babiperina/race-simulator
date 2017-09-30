@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <Pane fx:id="main" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;" BorderPane.alignment="CENTER">
+         <children>
+            <Ellipse fill="#a5acb2" layoutX="300.0" layoutY="201.0" radiusX="290.0" radiusY="160.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="ellipse" fill="#a5acb2" layoutX="300.0" layoutY="201.0" onMouseClicked="#printEllipse" radiusX="251.0" radiusY="135.0" stroke="#ffe9e9" strokeType="INSIDE" strokeWidth="2.0" style="-fx-stroke-line-cap: butt; -fx-stroke-dash-offset: 6; -fx-stroke-dash-array: 14 4;" />
+            <Ellipse fill="#ffddb2" layoutX="300.0" layoutY="201.0" radiusX="203.0" radiusY="112.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#iniciarCorrida" text="Play" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
