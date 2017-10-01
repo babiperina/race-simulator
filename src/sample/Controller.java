@@ -73,33 +73,33 @@ public class Controller implements Initializable {
         Circle nvo2 = new Circle();
         nvo2.setRadius(5);
         nvo2.setFill(Color.RED);
+        nvo.setCenterX(centroX + ellipse.getRadiusX() * Math.cos(theta- (02 * Math.PI / 20)));
+        nvo.setCenterY(centroY - ellipse.getRadiusY() * Math.sin(theta - (02 * Math.PI / 20)));
+        nvo2.setCenterX(centroX + ellipse.getRadiusX() * Math.cos(theta - (02 * Math.PI / 40)));
+        nvo2.setCenterY(centroY - ellipse.getRadiusY() * Math.sin(theta - (02 * Math.PI / 40)));
         main.getChildren().add(nvo);
+        main.getChildren().add(nvo2);
 
-        double step = 02 * Math.PI / 50;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 3; i++) {
-                    for (theta = 0; theta < 2 * Math.PI; theta += step) {
-                        Platform.runLater(() -> {
-                            main.getChildren().remove(nvo);
-                            nvo.setCenterX(centroX + ellipse.getRadiusX() * Math.cos(theta));
-                            nvo.setCenterY(centroY - ellipse.getRadiusY() * Math.sin(theta));
-                            main.getChildren().add(nvo);
-                        });
-                        try {
-                            Thread.sleep(100);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-        }).start();
-    }
-
-
-    public void iniciarCarro(){
-
+//        double step = 02 * Math.PI / 50;
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                for (int i = 0; i < 3; i++) {
+//                    for (theta = 0; theta < 2 * Math.PI; theta += step) {
+//                        Platform.runLater(() -> {
+//                            main.getChildren().remove(nvo);
+//                            nvo.setCenterX(centroX + ellipse.getRadiusX() * Math.cos(theta));
+//                            nvo.setCenterY(centroY - ellipse.getRadiusY() * Math.sin(theta));
+//                            main.getChildren().add(nvo);
+//                        });
+//                        try {
+//                            Thread.sleep(100);
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }
+//            }
+//        }).start();
     }
 }
