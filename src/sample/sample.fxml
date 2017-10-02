@@ -22,6 +22,14 @@
                   <Image url="/imgs/pitstoplogo.png" />
                </image>
             </ImageView>
+            <Pane layoutX="474.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="95.0" style="-fx-border-color: black; -fx-background-color: pink;">
+               <children>
+                  <Label layoutX="10.0" layoutY="8.0" text="1" />
+                  <Label layoutX="51.0" layoutY="8.0" text="2" />
+                  <Circle fx:id="primeiroColocado" fill="DODGERBLUE" layoutX="32.0" layoutY="16.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Circle fx:id="segundoColocado" fill="DODGERBLUE" layoutX="75.0" layoutY="16.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </Pane>
          </children>
       </Pane>
    </center>
